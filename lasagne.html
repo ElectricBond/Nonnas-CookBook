@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nonna's Lasagna - Nonna's Italian Cookbook</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=6">
+</head>
+<body>
+
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Nonna's Lasagna</h1>
+        <a href="index.html" class="home-btn">🏠 Home</a>
+    </div>
+</header>
+
+<section class="recipe-detail">
+    <img src="images/lasagna.jpg" alt="Nonna's Lasagna" class="recipe-detail-img">
+    <h2>Ingredients</h2>
+    <ul>
+        <li>Noodles</li>
+        <li>Cheese</li>
+        <li>Meat</li>
+    </ul>
+
+    <h2>Instructions</h2>
+    <p>Layer noodles, cheese, and meat in a baking dish. Bake at 375°F until golden and bubbly.</p>
+</section>
+
+<section id="reviews">
+    <h2>Reviews & Comments</h2>
+    <!-- Disqus Embed -->
+    <div id="disqus_thread"></div>
+    <script>
+        var disqus_config = function () {
+            this.page.url = window.location.href;
+            this.page.identifier = 'lasagna';
+        };
+        (function() {
+            var d = document, s = d.createElement('script');
+            s.src = 'https://YOUR_DISQUS_SHORTNAME_HERE.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the comments powered by Disqus.</noscript>
+</section>
+
+<footer>
+    <p>&copy; 2026 Nonna's Italian Cookbook. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
