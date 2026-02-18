@@ -1,0 +1,19 @@
+{
+  "recipe": {
+    "name": "Sample Recipe",
+    "history": "This recipe has been passed down for generations.",
+    "ingredients": [
+      "Ingredient 1",
+      "Ingredient 2",
+      "Ingredient 3"
+    ],
+    "instructions": "Step 1: Do this. Step 2: Do that.",
+    "cooking_time": "30 minutes",
+    "servings": 4,
+    "difficulty_level": "Easy",
+    "photo_urls": [
+      "http://example.com/photo1.jpg",
+      "http://example.com/photo2.jpg"
+    ]
+  }
+}
