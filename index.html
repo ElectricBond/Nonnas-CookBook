@@ -9,7 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
 
 <!-- CSS -->
-<link rel="stylesheet" href="styles.css?v=6">
+<link rel="stylesheet" href="styles.css?v=7">
 </head>
 <body>
 
@@ -19,61 +19,83 @@
     <div class="hero-content">
         <h1>Nonna's Italian Cookbook 🇮🇹</h1>
         <p class="hero-subtitle">Authentic Roman & Italian recipes passed down through generations</p>
-        <a href="index.html" class="home-btn">🏠 Home</a>
+        <input type="text" id="search" placeholder="Search recipes..." class="search-input">
         <audio id="ambientAudio" autoplay loop>
             <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_e44c6a8b6c.mp3?filename=italian-cafe-ambience-9036.mp3" type="audio/mpeg">
         </audio>
     </div>
 </header>
 
-<!-- Search Bar -->
-<section class="search-section">
-    <input type="text" id="search" placeholder="Search for a recipe...">
-</section>
-
 <!-- Recipe Grid -->
+<main>
 <section id="recipes">
-    <h2>All Recipes</h2>
-    <div class="recipe-grid" id="recipeGrid">
+    <div class="recipe-grid">
 
         <!-- Nonna's Lasagna -->
-        <a href="lasagna.html" class="recipe-link">
-            <div class="recipe-card" data-name="Nonna's Lasagna" data-category="Pasta">
-                <img src="images/lasagna.jpg" alt="Lasagna">
+        <div class="recipe-card" data-name="Nonna's Lasagna" data-category="Pasta">
+            <img src="images/lasagna.jpg" alt="Nonna's Lasagna">
+            <div class="recipe-content">
                 <h3>Nonna's Lasagna</h3>
                 <span class="category-badge">Pasta</span>
+                <h4>Ingredients</h4>
+                <ul>
+                    <li>Noodles</li>
+                    <li>Cheese</li>
+                    <li>Meat</li>
+                </ul>
+                <h4>Instructions</h4>
+                <p>Layer noodles, cheese, and meat in a baking dish. Bake at 375°F until golden and bubbly.</p>
             </div>
-        </a>
+        </div>
 
         <!-- Spaghetti Carbonara -->
-        <a href="carbonara.html" class="recipe-link">
-            <div class="recipe-card" data-name="Spaghetti Carbonara" data-category="Pasta">
-                <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
+        <div class="recipe-card" data-name="Spaghetti Carbonara" data-category="Pasta">
+            <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
+            <div class="recipe-content">
                 <h3>Spaghetti Carbonara</h3>
                 <span class="category-badge">Pasta</span>
+                <h4>Ingredients</h4>
+                <ul>
+                    <li>Spaghetti</li>
+                    <li>Pancetta</li>
+                    <li>Eggs</li>
+                    <li>Parmesan Cheese</li>
+                </ul>
+                <h4>Instructions</h4>
+                <p>Cook pasta. Mix eggs and cheese, toss with pancetta and pasta until creamy.</p>
             </div>
-        </a>
+        </div>
 
         <!-- Tiramisu -->
-        <a href="tiramisu.html" class="recipe-link">
-            <div class="recipe-card" data-name="Tiramisu" data-category="Dessert">
-                <img src="images/tiramisu.jpg" alt="Tiramisu">
+        <div class="recipe-card" data-name="Tiramisu" data-category="Dessert">
+            <img src="images/tiramisu.jpg" alt="Tiramisu">
+            <div class="recipe-content">
                 <h3>Tiramisu</h3>
                 <span class="category-badge">Dessert</span>
+                <h4>Ingredients</h4>
+                <ul>
+                    <li>Ladyfingers</li>
+                    <li>Mascarpone</li>
+                    <li>Coffee</li>
+                    <li>Cocoa Powder</li>
+                </ul>
+                <h4>Instructions</h4>
+                <p>Layer coffee-soaked ladyfingers and mascarpone cream, chill, and dust with cocoa.</p>
             </div>
-        </a>
+        </div>
 
-        <!-- Add more recipes similarly -->
+        <!-- More recipe cards here (add your own images and recipes) -->
 
     </div>
 </section>
+</main>
 
 <footer>
     <p>&copy; 2026 Nonna's Italian Cookbook. All rights reserved.</p>
 </footer>
 
+<!-- JS for Live Search -->
 <script>
-// Live search
 const searchInput = document.getElementById('search');
 const recipes = document.querySelectorAll('.recipe-card');
 
@@ -82,9 +104,9 @@ searchInput.addEventListener('input', function() {
     recipes.forEach(card => {
         const name = card.dataset.name.toLowerCase();
         if(name.includes(filter)) {
-            card.parentElement.style.display = 'inline-block';
+            card.style.display = 'flex';
         } else {
-            card.parentElement.style.display = 'none';
+            card.style.display = 'none';
         }
     });
 });
