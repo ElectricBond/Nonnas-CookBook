@@ -1,203 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nonna's Italian Cookbook</title>
-    
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- CSS -->
-    <link rel="stylesheet" href="styles.css?v=5">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nonna's Italian Cookbook</title>
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- CSS -->
+<link rel="stylesheet" href="styles.css?v=6">
 </head>
 <body>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Nonna's Italian Cookbook 🇮🇹</h1>
-            <p class="hero-subtitle">Authentic Roman & Italian recipes passed down through generations</p>
-            <audio id="ambientAudio" autoplay loop>
-                <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_e44c6a8b6c.mp3?filename=italian-cafe-ambience-9036.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-    </header>
+<!-- Hero Section -->
+<header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>Nonna's Italian Cookbook 🇮🇹</h1>
+        <p class="hero-subtitle">Authentic Roman & Italian recipes passed down through generations</p>
+        <a href="index.html" class="home-btn">🏠 Home</a>
+        <audio id="ambientAudio" autoplay loop>
+            <source src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_e44c6a8b6c.mp3?filename=italian-cafe-ambience-9036.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+</header>
 
-    <!-- Search Section -->
-    <section class="search-section">
-        <input type="text" id="search" placeholder="Search for a recipe...">
-    </section>
+<!-- Search Bar -->
+<section class="search-section">
+    <input type="text" id="search" placeholder="Search for a recipe...">
+</section>
 
-    <!-- Featured Recipe -->
-    <section id="featured-recipe">
-        <h2>Featured Recipe</h2>
-        <div class="recipe-card" data-name="Nonna's Lasagna" data-category="Pasta">
-            <img src="https://images.unsplash.com/photo-1603079180082-5c6aa0d5e7ab?auto=format&fit=crop&w=600&q=80" alt="Lasagna">
-            <h3>Nonna's Lasagna</h3>
-            <span class="category-badge">Pasta</span>
-            <h4>Ingredients</h4>
-            <ul>
-                <li>Noodles</li>
-                <li>Cheese</li>
-                <li>Meat</li>
-            </ul>
-            <h4>Instructions</h4>
-            <p>Layer everything and bake at 375°F until golden and bubbly.</p>
-        </div>
-    </section>
+<!-- Recipe Grid -->
+<section id="recipes">
+    <h2>All Recipes</h2>
+    <div class="recipe-grid" id="recipeGrid">
 
-    <!-- Recipe Grid Section -->
-    <section id="recipes">
-        <h2>All Recipes</h2>
-        <div class="recipe-grid" id="recipeGrid">
+        <!-- Nonna's Lasagna -->
+        <a href="lasagna.html" class="recipe-link">
+            <div class="recipe-card" data-name="Nonna's Lasagna" data-category="Pasta">
+                <img src="images/lasagna.jpg" alt="Lasagna">
+                <h3>Nonna's Lasagna</h3>
+                <span class="category-badge">Pasta</span>
+            </div>
+        </a>
 
-            <!-- Spaghetti Carbonara -->
+        <!-- Spaghetti Carbonara -->
+        <a href="carbonara.html" class="recipe-link">
             <div class="recipe-card" data-name="Spaghetti Carbonara" data-category="Pasta">
-                <img src="https://images.unsplash.com/photo-1617196037388-9e0c84b8c1f5?auto=format&fit=crop&w=600&q=80" alt="Spaghetti Carbonara">
+                <img src="images/carbonara.jpg" alt="Spaghetti Carbonara">
                 <h3>Spaghetti Carbonara</h3>
                 <span class="category-badge">Pasta</span>
-                <h4>Ingredients</h4>
-                <ul>
-                    <li>Spaghetti</li>
-                    <li>Pancetta</li>
-                    <li>Eggs</li>
-                    <li>Parmesan Cheese</li>
-                </ul>
-                <h4>Instructions</h4>
-                <p>Cook pasta. Mix eggs and cheese, toss with pancetta and pasta until creamy.</p>
             </div>
+        </a>
 
-            <!-- Tiramisu -->
+        <!-- Tiramisu -->
+        <a href="tiramisu.html" class="recipe-link">
             <div class="recipe-card" data-name="Tiramisu" data-category="Dessert">
-                <img src="https://images.unsplash.com/photo-1617196012131-ff1f8b7a4b3e?auto=format&fit=crop&w=600&q=80" alt="Tiramisu">
+                <img src="images/tiramisu.jpg" alt="Tiramisu">
                 <h3>Tiramisu</h3>
                 <span class="category-badge">Dessert</span>
-                <h4>Ingredients</h4>
-                <ul>
-                    <li>Ladyfingers</li>
-                    <li>Mascarpone</li>
-                    <li>Coffee</li>
-                    <li>Cocoa Powder</li>
-                </ul>
-                <h4>Instructions</h4>
-                <p>Layer coffee-soaked ladyfingers and mascarpone cream, chill, and dust with cocoa.</p>
             </div>
+        </a>
 
-            <!-- Cacio e Pepe -->
-            <div class="recipe-card" data-name="Cacio e Pepe" data-category="Pasta">
-                <img src="https://images.unsplash.com/photo-1603079180079-4e6a4a1b9c7f?auto=format&fit=crop&w=600&q=80" alt="Cacio e Pepe">
-                <h3>Cacio e Pepe</h3>
-                <span class="category-badge">Pasta</span>
-                <h4>Ingredients</h4>
-                <ul>
-                    <li>Spaghetti</li>
-                    <li>Pecorino Romano</li>
-                    <li>Black Pepper</li>
-                </ul>
-                <h4>Instructions</h4>
-                <p>Cook pasta. Toss with cheese and pepper until creamy and coated.</p>
-            </div>
+        <!-- Add more recipes similarly -->
 
-            <!-- Panna Cotta -->
-            <div class="recipe-card" data-name="Panna Cotta" data-category="Dessert">
-                <img src="https://images.unsplash.com/photo-1598514983146-1b1a4a27677e?auto=format&fit=crop&w=600&q=80" alt="Panna Cotta">
-                <h3>Panna Cotta</h3>
-                <span class="category-badge">Dessert</span>
-                <h4>Ingredients</h4>
-                <ul>
-                    <li>Cream</li>
-                    <li>Gelatin</li>
-                    <li>Vanilla</li>
-                </ul>
-                <h4>Instructions</h4>
-                <p>Heat cream, mix in gelatin and vanilla, pour into molds, chill until set.</p>
-            </div>
+    </div>
+</section>
 
-            <!-- Bruschetta al Pomodoro -->
-            <div class="recipe-card" data-name="Bruschetta al Pomodoro" data-category="Appetizer">
-                <img src="https://images.unsplash.com/photo-1606312615675-3d05a3c5c88d?auto=format&fit=crop&w=600&q=80" alt="Bruschetta al Pomodoro">
-                <h3>Bruschetta al Pomodoro</h3>
-                <span class="category-badge">Appetizer</span>
-                <h4>Ingredients</h4>
-                <ul>
-                    <li>Bread</li>
-                    <li>Tomatoes</li>
-                    <li>Basil</li>
-                    <li>Olive Oil</li>
-                </ul>
-                <h4>Instructions</h4>
-                <p>Toast bread, top with diced tomatoes, basil, olive oil, and serve fresh.</p>
-            </div>
+<footer>
+    <p>&copy; 2026 Nonna's Italian Cookbook. All rights reserved.</p>
+</footer>
 
-            <!-- Saltimbocca alla Romana -->
-            <div class="recipe-card" data-name="Saltimbocca alla Romana" data-category="Main">
-                <img src="https://images.unsplash.com/photo-1603079180083-1a2b3c4d5e6f?auto=format&fit=crop&w=600&q=80" alt="Saltimbocca alla Romana">
-                <h3>Saltimbocca alla Romana</h3>
-                <span class="category-badge">Main</span>
-                <h4>Ingredients</h4>
-                <ul>
-                    <li>Veal</li>
-                    <li>Prosciutto</li>
-                    <li>Sage</li>
-                </ul>
-                <h4>Instructions</h4>
-                <p>Layer veal with prosciutto and sage, cook in butter and wine until tender.</p>
-            </div>
+<script>
+// Live search
+const searchInput = document.getElementById('search');
+const recipes = document.querySelectorAll('.recipe-card');
 
-            <!-- Osso Buco -->
-            <div class="recipe-card" data-name="Osso Buco" data-category="Main">
-                <img src="https://images.unsplash.com/photo-1603079180081-0a1b2c3d4e5f?auto=format&fit=crop&w=600&q=80" alt="Osso Buco">
-                <h3>Osso Buco</h3>
-                <span class="category-badge">Main</span>
-                <h4>Ingredients</h4>
-                <ul>
-                    <li>Veal Shank</li>
-                    <li>Vegetables</li>
-                    <li>White Wine</li>
-                </ul>
-                <h4>Instructions</h4>
-                <p>Braise veal with vegetables and wine until tender, serve with gremolata.</p>
-            </div>
-
-            <!-- Add more recipe cards similarly to reach 15–20 recipes -->
-
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery">
-        <h2>Recipe Gallery</h2>
-        <div class="gallery-grid">
-            <img src="https://images.unsplash.com/photo-1603079180082-5c6aa0d5e7ab?auto=format&fit=crop&w=400&q=80" alt="Lasagna">
-            <img src="https://images.unsplash.com/photo-1617196037388-9e0c84b8c1f5?auto=format&fit=crop&w=400&q=80" alt="Spaghetti Carbonara">
-            <img src="https://images.unsplash.com/photo-1617196012131-ff1f8b7a4b3e?auto=format&fit=crop&w=400&q=80" alt="Tiramisu">
-            <img src="https://images.unsplash.com/photo-1606312615675-3d05a3c5c88d?auto=format&fit=crop&w=400&q=80" alt="Bruschetta">
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2026 Nonna's Italian Cookbook. All rights reserved.</p>
-    </footer>
-
-    <!-- JS for Search -->
-    <script>
-        const searchInput = document.getElementById('search');
-        const recipes = document.querySelectorAll('.recipe-card');
-
-        searchInput.addEventListener('input', function() {
-            const filter = searchInput.value.toLowerCase();
-            recipes.forEach(card => {
-                const name = card.dataset.name.toLowerCase();
-                if(name.includes(filter)) {
-                    card.style.display = 'flex';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
-    </script>
+searchInput.addEventListener('input', function() {
+    const filter = searchInput.value.toLowerCase();
+    recipes.forEach(card => {
+        const name = card.dataset.name.toLowerCase();
+        if(name.includes(filter)) {
+            card.parentElement.style.display = 'inline-block';
+        } else {
+            card.parentElement.style.display = 'none';
+        }
+    });
+});
+</script>
 
 </body>
 </html>
