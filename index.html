@@ -1,15 +1,56 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <link rel="stylesheet" href="styles.css">
-  <title>Nonnas Cookbook</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nonna's Cookbook</title>
+    <link rel="stylesheet" href="styles.css?v=1">
 </head>
 <body>
-  <h1>Nonna's Cookbook 🍝</h1>
+    <header>
+        <h1>Nonna's Cookbook 🍝</h1>
+        <input type="text" id="search" placeholder="Search for a recipe...">
+    </header>
 
-  <h2>Lasagna</h2>
-  <p><strong>Ingredients:</strong> Noodles, Cheese, Meat</p>
-  <p><strong>Instructions:</strong> Layer and bake at 375°F.</p>
+    <section id="recipes">
+        <h2>Our Recipes</h2>
+        <div class="recipe-grid">
+            <!-- Recipe Card 1 -->
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1603079180082-5c6aa0d5e7ab?auto=format&fit=crop&w=600&q=80" alt="Lasagna">
+                <h3>Lasagna</h3>
+                <h4>Ingredients</h4>
+                <ul>
+                    <li>Noodles</li>
+                    <li>Cheese</li>
+                    <li>Meat</li>
+                    <li>Tomato Sauce</li>
+                </ul>
+                <h4>Instructions</h4>
+                <p>Layer noodles, meat, and cheese. Bake at 375°F for 45 minutes.</p>
+            </div>
 
+            <!-- Recipe Card 2 -->
+            <div class="recipe-card">
+                <img src="https://images.unsplash.com/photo-1617196037388-9e0c84b8c1f5?auto=format&fit=crop&w=600&q=80" alt="Chocolate Chip Cookies">
+                <h3>Chocolate Chip Cookies</h3>
+                <h4>Ingredients</h4>
+                <ul>
+                    <li>Flour</li>
+                    <li>Sugar</li>
+                    <li>Butter</li>
+                    <li>Chocolate Chips</li>
+                </ul>
+                <h4>Instructions</h4>
+                <p>Mix ingredients, form balls, and bake at 350°F for 12 minutes.</p>
+            </div>
+
+            <!-- Add more recipe cards here -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nonna's Cookbook. All rights reserved.</p>
+    </footer>
 </body>
 </html>
